@@ -48,15 +48,11 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-	const colorScheme = useColorScheme();
-
 	return (
-		<ThemeProvider
-			value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-		>
+		<KeyboardProvider statusBarTranslucent>
 			<Stack>
 				<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
 			</Stack>
-		</ThemeProvider>
+		</KeyboardProvider>
 	);
 }
